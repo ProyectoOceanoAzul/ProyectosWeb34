@@ -116,7 +116,7 @@ header .fa-bars{
 .banner{
     min-height: 50vh;
     background: linear-gradient(rgba(225,184,0,0.2), rgba(236,134,0,0.8)), 
-    url("/img/bg.webp") no-repeat;   
+    url("../img/bg.webp") no-repeat;   
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -430,6 +430,7 @@ footer div.footer__iconos a i:hover{
     }
 
 }
+
 
 
 

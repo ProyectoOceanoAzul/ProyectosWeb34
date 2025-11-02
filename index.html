@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <link rel="shortcut icon" href="./ico/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <link rel="stylesheet" href="./css/estilo.css">
+    <title>Proyecto1</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <!-- logo-->
+        <a href="#" class="logo">
+
+            <img src="./img/redux.svg" style="width: 50px;" alt="">
+        </a>
+
+        <!-- menu de la navegacion -->
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <a href="#home" class="active">Inicio</a>
+                </li>
+
+                <li>
+                    <a href="#playa" class="">Playa</a>
+                </li>
+
+                <li>
+                    <a href="#descansa" class="">Descansa</a>
+                </li>
+
+                <li>
+                    <a href="#construye" class="">Construye</a>
+                </li>
+
+                <li>
+                    <a href="#contacto" class="">Contacto</a>
+                </li>
+
+
+            </ul>
+        </nav>
+
+
+
+        <!-- icono -->
+        <div class="fas fa-bars">
+
+        </div>
+
+    </header>
+
+
+    <!-- banner -->
+    <section class="banner" id="home">
+        <div class="banner__contenido">
+            <h1>Inicio de la página</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+
+            <a href="#">
+                <button>Descubre más</button>
+            </a>
+        </div>
+
+    </section>
+
+
+
+    <section class="section__1 contenedor" id="playa">
+        <div class="section__texto">
+            <h2>Playa</h2>
+            <ul>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+            </ul>
+        </div>
+
+        <div class="section__imagen">
+            <img src="./img/imagen1.webp" alt="">
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <section class="section__1 contenedor" id="descansa">
+
+        <div class="section__imagen izq">
+            <img src="./img/imagen2.webp" alt="">
+
+        </div>
+
+        <div class="section__texto">
+            <h2>Descansa</h2>
+            <ul>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+            </ul>
+        </div>
+
+
+
+    </section>
+
+
+
+    <section class="section__1 contenedor" id="construye">
+
+        <div class="section__texto">
+            <h2>Construye</h2>
+            <ul>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+            </ul>
+        </div>
+
+        <div class="section__imagen section__2">
+            <img src="./img/imagen3.webp" alt="">
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- pie de pagina -->
+    <section class="pie contenedor" id="contacto">
+        <div class="link">
+            <h3>Lorem</h3>
+            <ul>
+                <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+            </ul>
+        </div>
+
+
+        <div class="link">
+            <h3>Lorem</h3>
+            <ul>
+                <li><a href="#">Lorem ipsum dolor</a></li>
+                <li><a href="#">Lorem ipsum dolor</a></li>
+                <li><a href="#">Lorem ipsum dolor</a></li>
+                <li><a href="#">Lorem ipsum dolor</a></li>
+            </ul>
+        </div>
+
+
+        <div class="link">
+            <h3>Lorem</h3>
+            <ul>
+                <li><a href="#">Lorem ipsum dolor</a></li>
+                <li><a href="#">Lorem ipsum dolor</a></li>
+                <li><a href="#">Lorem ipsum dolor</a></li>
+                <li><a href="#">Lorem ipsum dolor</a></li>
+            </ul>
+        </div>
+
+
+        <div class="link">
+            <h3>Lorem</h3>
+            <ul>
+                <li><a href="#">Lorem ipsum</a></li>
+                <li><a href="#">Lorem ipsum</a></li>
+                <li><a href="#">Lorem ipsum</a></li>
+                <li><a href="#">Lorem ipsum</a></li>
+            </ul>
+        </div>
+
+    </section>
+
+
+
+    <!-- footer -->
+    <footer>
+        <div class="footer__texto">
+            <p>
+                © 2020 CNAIPERU Todos los derechos reservados.
+            </p>
+        </div>
+
+        <div class="footer__iconos">
+            <a href="#">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-twitter"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+
+    </footer>
+
+    <!-- libreria -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+    <script>
+        $(document).ready(function () {
+
+            $('.fa-bars').click(function () {
+
+                $(this).toggleClass('fa-times');
+                $('.navbar').toggleClass('nav-toggle');
+
+            });
+
+            $(window).on('scroll load', function () {
+
+                $('.fa-bars').removeClass('fa-times');
+                $('.navbar').removeClass('nav-toggle');
+
+                $('section').each(function () {
+
+                    var id = $(this).attr('id');
+                    var height = $(this).height();
+                    var offset = $(this).offset().top - 200;
+                    var top = $(window).scrollTop();
+
+                    if (top >= offset && top < offset + height) {
+                        $('.navbar ul li a').removeClass('active');
+                        $('.navbar').find('[href="#' + id + '"]').addClass('active');
+                    }
+
+                });
+
+            });
+
+        });
+    </script>
+
+
+</body>
+
+</html>
